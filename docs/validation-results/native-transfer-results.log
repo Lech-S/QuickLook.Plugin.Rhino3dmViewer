@@ -1,0 +1,18 @@
+PASS chunk identity 0
+PASS bounded chunk 0
+PASS completion marker 1
+PASS chunk identity 1
+PASS bounded chunk 1
+PASS completion marker 2
+PASS chunk identity 2
+PASS bounded chunk 2
+PASS completion marker 3
+PASS chunk identity 3
+PASS bounded chunk 3
+PASS completion marker 4
+PASS multi-chunk bytes are exact; Unicode path works
+PASS reject out-of-order read
+PASS cancelled transfer cannot read
+PASS missing file produces error
+PASS empty file produces error
+TOTAL 17

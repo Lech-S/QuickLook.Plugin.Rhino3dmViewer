@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-eval' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self' blob:; img-src 'self' data: blob:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <title>Rhino 3DM Preview</title>
+  <link rel="stylesheet" href="viewer.css?v=1.0.2">
+  <script type="module" src="viewer.bundle.js?v=1.0.2"></script>
+</head>
+<body>
+  <header>
+    <div class="identity"><span class="mark">3</span><div><strong id="filename">Rhino 3DM</strong><span id="subtitle">本地模型预览</span></div></div>
+    <div class="toolbar" aria-label="显示模式">
+      <button data-mode="original" class="active" title="文件材质 / 物体色">原始</button>
+      <button data-mode="clay" title="统一灰模">灰模</button>
+      <button data-mode="wire" title="线框 · W">线框</button>
+      <button data-mode="color" title="自动为不同对象分配颜色 · C">彩色</button>
+      <i></i><button id="projection" title="切换正交 / 透视 · O">透视</button>
+      <button id="theme" title="切换背景">浅色</button>
+    </div>
+  </header>
+  <main>
+    <aside id="sidebar">
+      <div class="panel-top"><strong>模型结构</strong><button id="resetVisibility" title="恢复文件原始显隐">恢复</button></div>
+      <div class="tabs"><button id="layersTab" class="active">图层</button><button id="objectsTab">对象</button></div>
+      <input id="search" type="search" placeholder="查找图层或对象…" aria-label="查找图层或对象">
+      <div id="tree" role="tree"></div>
+      <div id="treeNote"></div>
+      <div class="model-info"><label>模型信息</label><div id="metadata">等待载入</div></div>
+    </aside>
+    <section id="viewport" aria-label="三维模型预览">
+      <div class="viewport-top"><button id="toggleSidebar" title="模型结构 · T">结构</button><div class="view-buttons"><button data-view="iso" class="active" title="等轴测 · 1">等轴</button><button data-view="front" title="前视 · 2">前</button><button data-view="right" title="右视 · 3">右</button><button data-view="top" title="顶视 · 4">顶</button><button id="fit" title="适应可见模型 · F">适应</button></div></div>
+      <div id="selection" hidden></div>
+      <div class="viewport-bottom"><div class="toggles"><button id="grid" class="active" title="地面网格">网格</button><button id="sectionToggle" title="剖切 · S">剖切</button><button id="isolate" disabled title="仅显示选中对象 · I">独显</button><button id="showAll" title="显示所有对象，包括原始隐藏对象">全显</button></div><span class="axis-key"><b class="x">X</b><b class="y">Y</b><b class="z">Z</b></span></div>
+      <div id="sectionPanel" hidden><label>剖切轴</label><select id="sectionAxis" aria-label="剖切轴"><option>X</option><option>Y</option><option>Z</option></select><input id="sectionSlider" aria-label="剖切位置" type="range" min="-100" max="100" value="0"><span>无封口</span></div>
+      <div id="loading" class="overlay"><div class="loading-card"><div class="spinner"></div><strong id="loadingTitle">准备三维预览</strong><p id="loadingDetail">正在初始化本地渲染组件…</p><div class="progress"><span id="progressBar"></span></div></div></div>
+      <div id="error" class="overlay" hidden><div class="error-card"><span class="error-sign">!</span><h2 id="errorTitle">无法预览此模型</h2><p id="errorDetail"></p><button id="retry">重新载入</button></div></div>
+    </section>
+  </main>
+  <div id="warnings" hidden><button id="closeWarnings" title="收起提示">×</button><span id="warningText"></span></div>
+  <footer><span id="status">Rhino 3DM Viewer · 1.0.2 测试版</span><span>左键旋转 · 右键平移 · 滚轮缩放 · 双击聚焦 · 空格关闭</span></footer>
+</body>
+</html>

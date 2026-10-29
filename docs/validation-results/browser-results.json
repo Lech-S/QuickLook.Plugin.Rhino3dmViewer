@@ -1,0 +1,84 @@
+[
+  {
+    "test": "Automatic object colors are distinct and stable; original appearance is restored; C shortcut",
+    "passed": true
+  },
+  {
+    "test": "v8 rendering, layers, inherited visibility, wire, ortho, section, isolate, reset",
+    "passed": true
+  },
+  {
+    "test": "layered-v5.3dm",
+    "passed": true,
+    "objects": 4,
+    "warnings": []
+  },
+  {
+    "test": "layered-v6.3dm",
+    "passed": true,
+    "objects": 4,
+    "warnings": []
+  },
+  {
+    "test": "layered-v7.3dm",
+    "passed": true,
+    "objects": 4,
+    "warnings": []
+  },
+  {
+    "test": "mesh.3dm",
+    "passed": true,
+    "objects": 1,
+    "warnings": []
+  },
+  {
+    "test": "blocks.3dm",
+    "passed": true,
+    "objects": 2,
+    "warnings": [
+      "部分曲面或实体没有保存显示网格。请在 Rhino 中切到着色视图，执行 Save，再取消“仅保存几何体 / Save small”。"
+    ]
+  },
+  {
+    "test": "Automatic color also covers curves and point clouds; original data remains intact",
+    "passed": true
+  },
+  {
+    "test": "file3dm_stuff.3dm",
+    "passed": true,
+    "objects": 13,
+    "warnings": [
+      "部分曲面或实体没有保存显示网格。请在 Rhino 中切到着色视图，执行 Save，再取消“仅保存几何体 / Save small”。"
+    ]
+  },
+  {
+    "test": "empty.3dm error UI",
+    "passed": true
+  },
+  {
+    "test": "invalid.3dm error UI",
+    "passed": true
+  },
+  {
+    "test": "no-display-mesh.3dm error UI",
+    "passed": true
+  },
+  {
+    "test": "Host message binary transfer, no model fetch: layered-v8.3dm",
+    "passed": true,
+    "chunks": 1
+  },
+  {
+    "test": "Host message binary transfer, no model fetch: file3dm_stuff.3dm",
+    "passed": true,
+    "chunks": 11
+  },
+  {
+    "test": "Host read error is visible and retry succeeds",
+    "passed": true
+  },
+  {
+    "test": "No page exceptions and no external network requests",
+    "passed": true
+  }
+]

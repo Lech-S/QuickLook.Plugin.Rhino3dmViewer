@@ -1,0 +1,1 @@
+QuickLook.Common.dll is a build-time reference only, obtained from Mostafa214/QuickLook.Plugin.StepViewer commit 8d2d8ec712b440dced15093644919a9468348960. SHA-256: a1971635913f89968e9b5a55eb05ca28b06881caefbda9e3a0eee8b33c979576. Source and license: QL-Win/QuickLook, GPL-3.0-or-later.

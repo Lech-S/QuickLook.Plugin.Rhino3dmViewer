@@ -24,7 +24,7 @@ The current UI is in Simplified Chinese. This is a community plugin and is not a
 
 Requirements: Windows 10/11, QuickLook, .NET Framework 4.8+, WebView2 Evergreen Runtime and a WebGL 2-capable graphics driver.
 
-1. Download `QuickLook.Plugin.Rhino3dmViewer_v1.0.2.qlplugin` from this repository's Releases after it has been published.
+1. Download `QuickLook.Plugin.Rhino3dmViewer_v1.0.2.qlplugin` from this repository's Releases.
 2. Keep QuickLook running. Select the `.qlplugin` file in File Explorer and press **Space**.
 3. Install the plugin, then fully restart QuickLook.
 4. Select a `.3dm` file and press **Space**. Start with [the generated demo](Samples/Rhino-Preview-Demo.3dm).
@@ -73,7 +73,7 @@ powershell -NoProfile -File .\build-plugin.ps1 -RebuildWeb
 
 The package is written to `dist/`. The build-time `lib/QuickLook.Common.dll` is not shipped into the user's QuickLook installation.
 
-The supplied GitHub Actions workflow builds the plugin on Windows and runs the host transfer tests. This workflow has been prepared but has not run on GitHub yet.
+The supplied GitHub Actions workflow builds the plugin on Windows and runs the host transfer tests. Windows build and host-transfer checks run in GitHub Actions; interactive desktop validation is a separate check.
 
 ## Validation and contribution
 
