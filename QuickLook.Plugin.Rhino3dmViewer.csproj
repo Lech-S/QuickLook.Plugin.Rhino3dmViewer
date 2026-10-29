@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <AssemblyName>QuickLook.Plugin.Rhino3dmViewer</AssemblyName>
+    <RootNamespace>QuickLook.Plugin.Rhino3dmViewer</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="tests\**\*.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
+    <Reference Include="QuickLook.Common"><HintPath>lib\QuickLook.Common.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\**"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Update="QuickLook.Plugin.Metadata.config"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+    <None Update="LICENSES\**"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+</Project>

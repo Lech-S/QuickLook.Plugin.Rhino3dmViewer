@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "quicklook-rhino3dm-viewer",
+  "version": "1.0.2",
+  "scripts": { "build:web": "node build-web.cjs" },
+  "dependencies": { "three": "0.186.1", "rhino3dm": "8.35.0" },
+  "devDependencies": { "esbuild": "0.25.11" }
+}
